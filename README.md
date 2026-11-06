@@ -10,7 +10,7 @@ This project uses Lean to verify that the König constant is one, the main resul
 
 ## Mathematical statement
 
-Let $`n`$ be a positive integer, and let $`f,g:\mathbb R^n\to\mathbb R`$ be Lebesgue-measurable functions satisfying $`|f(x)|\leq1`$ and $`|g(x)|\leq1`$ for every $`x\in\mathbb R^n`$. We define the normalized König bilinear form by
+Let $`n`$ be a positive integer, and let $`f,g:\mathbb R^n\to\mathbb R`$ be measurable functions. Define the König bilinear form by
 
 ```math
 B_{\mathrm K}(f,g):=\frac{1}{(\sqrt{2}\,\pi)^n}
@@ -41,6 +41,7 @@ The results of `lake comparator` can be checked through the GitHub workflow prov
 
 1. Sign in to GitHub, open the “Actions” tab, then open the first workflow run listed there, or open it directly from [here](https://xinyuanxie-hub.github.io/Konig-constant/latest-run/).
 2. Click “Verify the Challenge against Solution”, then expand “Run Comparator with Lean, NanoDa, and con-ron”.
-3. Check that the log reports acceptance by con-ron, NanoDa, and Lean, followed by `Your solution is okay!` (lines 591–596 of the complete downloaded job log for [this verified run](https://github.com/XinyuanXie-hub/Konig-constant/actions/runs/42155797780/job/127689507084); line numbers may vary between runs).
+3. Check that the log (lines 198–203) reports acceptance by con-ron, NanoDa, and Lean, followed by `Your solution is okay!`.
+
 
 Note: Here, we use the [“gold standard”](https://lean-lang.org/doc/reference/latest/ValidatingProofs/#validating-comparator) for validating proofs in Lean, and we refer readers to [“Challenges and External Checkers”](https://lean-lang.org/doc/reference/latest/Build-Tools-and-Distribution/Lake/#lake-comparator) for details on how it works.

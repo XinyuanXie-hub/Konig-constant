@@ -36,7 +36,7 @@ jobs:
   pages:
     name: Publish verification link
     if: >-
-      github.repository == 'XinyuanXie-hub/cyclic-lsi-new' &&
+      github.repository == 'XinyuanXie-hub/Konig-constant' &&
       github.ref == 'refs/heads/main' &&
       (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
@@ -50,7 +50,7 @@ jobs:
       cancel-in-progress: false
     environment:
       name: github-pages
-      url: https://xinyuanxie-hub.github.io/cyclic-lsi-new/latest-run/
+      url: https://xinyuanxie-hub.github.io/Konig-constant/latest-run/
     steps:
       - name: Check out source code
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1

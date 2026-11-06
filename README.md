@@ -37,12 +37,12 @@ K=1.
 
 ## Verification
 
-To verify the correctness of the theorem in Lean, one only needs to check that the statement and definitions in [Challenge.lean](Challenge.lean) match the [theorem](#theorem) stated above, and confirm that `lake comparator` succeeds.
+To verify the correctness of the theorem in Lean, one only needs to check that the statement and definitions in [Challenge.lean](Challenge.lean) match [Theorem](#theorem) stated above, and confirm that `lake comparator` succeeds.
 
 The results of `lake comparator` can be checked through the GitHub workflow provided by this project as follows:
 
-1. Sign in to GitHub, open the **Actions** tab, then open the latest **Lean CI** run on `main`, or open the [workflow runs](https://github.com/XinyuanXie-hub/Konig-constant/actions/workflows/lean.yml?query=branch%3Amain) directly.
-2. Click **Verify the Challenge against Solution**, then expand **Run Comparator with Lean, NanoDa, and con-ron**.
+1. Sign in to GitHub, open the “Actions” tab, then open the first workflow run listed there, or open it directly from [here](https://xinyuanxie-hub.github.io/Konig-constant/latest-run/).
+2. Click “Verify the Challenge against Solution”, then expand “Run Comparator with Lean, NanoDa, and con-ron”.
 3. Check that the log reports acceptance by con-ron, NanoDa, and Lean, followed by `Your solution is okay!`.
 
 Note: Here, we use the [“gold standard”](https://lean-lang.org/doc/reference/latest/ValidatingProofs/#validating-comparator) for validating proofs in Lean, and we refer readers to [“Challenges and External Checkers”](https://lean-lang.org/doc/reference/latest/Build-Tools-and-Distribution/Lake/#lake-comparator) for details on how it works.

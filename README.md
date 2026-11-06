@@ -2,7 +2,7 @@
 
 # The König constant is one
 
-This project uses [Lean](https://lean-lang.org/), a programming language in which a computer can verify mathematical proofs, to verify the asymptotic König constant result of:
+This project uses Lean to verify that the König constant is one, the main result of the paper cited below.
 
 > Xinyuan Xie and Haonan Zhang,
 > *The König constant is one*,
@@ -12,27 +12,31 @@ This project uses [Lean](https://lean-lang.org/), a programming language in whic
 
 ## Mathematical statement
 
-For a positive integer $n$ and Lebesgue-measurable functions $f,g:\mathbb R^n\to\mathbb R$ satisfying $|f(x)|\leq1$ and $|g(x)|\leq1$ for every $x$, define
+For each positive integer $N$, consider the normalized König bilinear form on Lebesgue-measurable real functions $f,g:\mathbb R^N\to\mathbb R$ with $|f(x)|\leq1$ and $|g(x)|\leq1$ for every $x$:
 
 ```math
-B_n(f,g)=\frac{1}{(\sqrt{2}\,\pi)^n}
-\int_{\mathbb R^n}\int_{\mathbb R^n}
-f(x)g(y)\exp\!\left(-\frac{\|x\|^2+\|y\|^2}{2}\right)
-\sin\langle x,y\rangle\,dy\,dx,
+B_{\mathrm K}(f,g):=\frac{1}{(\sqrt{2}\,\pi)^N}
+\int_{\mathbb R^N}\int_{\mathbb R^N}
+f(x)g(y)e^{-(\|x\|^2+\|y\|^2)/2}
+\sin\langle x,y\rangle\,dy\,dx.
 ```
 
-where both integrals use Lebesgue measure. Let
+Both integrals use Lebesgue measure. Define the König constant by
 
 ```math
-K=\sup\left\{B_n(f,g): n\geq1,\ f,g\text{ as above}\right\}.
+\mathfrak K_{\mathrm K}:=
+\sup_{N\geq1}
+\sup_{\substack{f,g:\mathbb R^N\to\mathbb R\ \text{Lebesgue-measurable}\\
+|f(x)|\leq1,\ |g(x)|\leq1\ \text{for every }x}}
+B_{\mathrm K}(f,g).
 ```
 
 <a id="theorem"></a>
 
-**Theorem.** The asymptotic König constant is one:
+**Theorem.** The König constant is one:
 
 ```math
-K=1.
+\mathfrak K_{\mathrm K}=1.
 ```
 
 ## Verification

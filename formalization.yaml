@@ -1,0 +1,26 @@
+project:
+  name: "The König constant is one"
+  description: "Verification that the König constant is one, as shown in the source."
+  authors:
+    - "Xinyuan Xie"
+    - "Haonan Zhang"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Xinyuan Xie"
+    - "Haonan Zhang"
+
+classification:
+  arxiv: ["math.FA", "cs.CC"]
+
+sources:
+  - title: "The König constant is one"
+    authors: ["Xinyuan Xie", "Haonan Zhang"]
+    id: "arXiv:2608.14817v1"
+    relationship: "formalizes"
+
+automation:
+  methods:
+    - method: "agent"
+
+review:
+  status: "human-authored-statement-and-definitions"
